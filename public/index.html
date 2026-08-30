@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wardrobe</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Wardrobe</h1>
+    <div class="topbar-actions">
+      <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp" hidden />
+      <button id="add-item-btn" class="btn btn-primary">+ Add item</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="banner" class="banner" hidden></div>
+
+    <div id="upload-status" class="upload-status" hidden>
+      <div class="spinner"></div>
+      <span id="upload-status-text">Uploading…</span>
+    </div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>Your wardrobe is empty. Add your first item to get started.</p>
+    </div>
+
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <div id="detail-overlay" class="overlay" hidden>
+    <div class="detail-panel">
+      <button id="detail-close" class="btn-close" aria-label="Close">&times;</button>
+      <div class="detail-body">
+        <div class="detail-image">
+          <img id="detail-img" src="" alt="Wardrobe item" />
+        </div>
+        <form id="detail-form" class="detail-form">
+          <div id="detail-warning" class="warning" hidden></div>
+          <label>Name<input name="name" type="text" placeholder="e.g. Blue Denim Jacket" /></label>
+          <label>Category<input name="category" type="text" /></label>
+          <label>Subcategory<input name="subcategory" type="text" /></label>
+          <label>Color<input name="color" type="text" /></label>
+          <label>Pattern<input name="pattern" type="text" /></label>
+          <label>Material<input name="material" type="text" /></label>
+          <label>Fit<input name="fit" type="text" /></label>
+          <label>Style<input name="style" type="text" /></label>
+          <label>Season<input name="season" type="text" /></label>
+          <label>Occasion<input name="occasion" type="text" /></label>
+          <label>Formality<input name="formality" type="text" /></label>
+          <label>Brand<input name="brand" type="text" /></label>
+          <div class="detail-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <span id="save-status" class="save-status"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

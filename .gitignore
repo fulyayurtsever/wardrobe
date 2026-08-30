@@ -1,0 +1,6 @@
+node_modules/
+.env
+wardrobe.db
+wardrobe.db-*
+uploads/*
+!uploads/.gitkeep
